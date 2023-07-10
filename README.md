@@ -2,7 +2,7 @@ Hello.
 
 The working video link of the application is: https://drive.google.com/file/d/1IDNk8Fz7AxYYzegSvi3nEIQ1gn6dc7ve/view?usp=drive_link
 
-The expense tracker app makes use of the following technologies:
+The Chatroom app makes use of the following technologies:
 1) HTML 5
 2) CSS
 3) JavaScript
