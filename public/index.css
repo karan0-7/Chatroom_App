@@ -1,0 +1,71 @@
+#root{display: flex;justify-content: center;align-items: center;width: 100%;height: 100%;}
+*{box-sizing: border-box;margin: 0;}
+
+#Homepage,#Chatroom,#ChangeUsername,#changeProfilePicture{width: 800px;height: 700px;background-color:  #151515;display: flex;flex-direction: column;;margin-top: 15px;border: 1px solid lightgray;}
+#Homepage h3{font-family: 'Arimo', sans-serif;font-size: 45px;font-weight: 800;margin-top: 50px;text-align:center;color: #F8A145;}
+#Homepage form{display: flex;flex-direction: column;margin: 20px 0;align-items: center;height: 80%;}
+#homepage_form_main{display: flex;width: 100%;justify-content: space-around;height: 30%;}
+#homepage_form_main div{display: flex;flex-direction: column;width: 40%;height: 100%;justify-content: center;align-items: center;}
+#label{color: #cc8437 ;font-family: 'Inter', sans-serif;font-size: 15px;font-weight: 600;margin: 10px 0;}
+#username,#room_name{width: 60% !important;height: 40px;width: 25%; border-radius: 10px;border: 0;margin: 0;font-family: 'Inter', sans-serif;font-size: 12.5px;font-weight: 400;}
+#Homepage p{font-family: 'Inter', sans-serif;font-size: 15px;font-weight: 600;margin: 10px 0;color:#F8A145;text-align: center;}
+#homepage_form_avatar{display: flex;justify-content: space-around;width: 100%;height: 60%;flex-direction: column;align-items: center;}
+#homepage_form_avatar_icons_1,#homepage_form_avatar_icons_2{display: grid;grid-template-columns: repeat(5,50px);grid-template-rows: repeat(4,50px);row-gap: 10px;column-gap: 20px;}
+#homepage_form_avatar_icons_1 img,#homepage_form_avatar_icons_2 img{width: 100%;height: 100%;}
+#homepage_form_avatar_icons_1 img:hover,#homepage_form_avatar_icons_2 img:hover{border: 1px solid gray;cursor: pointer;}
+#Homepage_submit{width: 20%;height: 40px;border-radius: 15px;background-color: #F8A145;color: #151515;display: flex;justify-content: center;font-family: 'Arimo', sans-serif;font-size: 15px;font-weight: 600;;align-items: center;margin-top: 40px;border: 0;}
+.warning{color: red !important;margin: 0;font-family: 'Inter', sans-serif;font-size: 15px;font-weight: 400;margin: 10px 0;}
+
+#Chatroom_main{overflow: auto;overflow-x: hidden;height: 90%;width: 100%;display: flex;flex-direction: column;font-family: 'Inter', sans-serif;font-size: 15px;font-weight: 400;margin:  5px 0;}
+.sender,.receiver{border-radius: 5px;display: flex;flex-direction: column;background-color: #F8A145;margin: 5px 0;width: fit-content;}
+.sender{margin-left: auto;margin-right: 10px;flex-direction: row !important;}
+.receive{margin-top: 5px;margin-left: 35px;background-color: #F8A145;display: flex;justify-content: center;align-items: center;width: fit-content;border-radius: 5px;}
+.receive p{color: #151515;font-family: 'Inter', sans-serif;font-size: 12px;font-weight: 500;}
+.receiver div{display: flex;}
+#chat_message{font-size: 12.5px !important;}
+#chat_time{font-size: 7px !important;display: flex;align-self: self-end;margin-left: 5px;margin-bottom: 1px;}
+.sender p,.receiver > p,#chat_message{font-family: 'Inter', sans-serif;font-size: 11px;font-weight: 400;margin: 2px 2px;color: #151515;}
+#Chatroom_message{height: 10%;width: 100%;margin-top: auto;}
+#Chatroom_message form{width: 100%;display: flex}
+#message{width: 90%;height: 50%;font-family: 'Inter', sans-serif;font-size: 15px;font-weight: 400;}
+#first_message_main{display: flex;background-color: #151515;width: fit-content;margin-top: 10px;}
+#first_message_main img{width: 30px;height: 30px;margin-right: 5px;border-radius: 5px;}
+#submit{width: 10%;height: 50%;}
+#Chatroom_Options{display: flex;background-color: #F8A145;width: 100%;height: 50px;align-items: center;}
+#Chatroom_Options_Room_Img{width: 40px;height: 40px;margin: 0 10px;border-radius: 15px;}
+#Chatroom_Options_Dots{width: 20px;height: 20px;margin-left: auto;margin-right: 10px;}
+#Chatroom_Options p {font-family: 'Arimo', sans-serif;font-size: 15px;font-weight: 500;margin: 0 5px;color: #151515;}
+#Chatroom_Options_Menu{display: none;position: absolute;cursor: pointer;;flex-direction: column;height: 70px;width: 100px;background-color: #F8A145;z-index: 1;right: 10px;top: 10px;}
+#Chatroom_Options_Menu a,#Chatroom_Options_Menu_Room a{text-decoration: none;color: #151515;font-family: 'Inter', sans-serif;font-size: 12.5px;font-weight: 400;margin: 5px 0;cursor: pointer;}
+#Chatroom_Options_Menu a:hover,#Chatroom_Options_Menu_Room a:hover{background-color: #cc8437;}
+
+#Chatroom_Options_Div{position: relative;margin-right: 10px;display: flex;justify-content: center;align-items: center;}
+#Chatroom_Options_Div p,#Chatroom_Options_Menu_Room_options p{color: #151515;font-family: 'Inter', sans-serif;font-size: 12.5px;font-weight: 400;margin: 5px 0;cursor: pointer;}
+#Chatroom_Options_Div p:hover{background-color: #cc8437;}
+#Chatroom_Options_Div:hover #Chatroom_Options_Menu_Room{display: flex !important;flex-direction: column;}
+#Chatroom_Options_Menu_Room{display: none;flex-direction: column;background-color: #F8A145;position: absolute;top: 15px;width: 100px;right: 10px;}
+#Chatroom_Options_Menu_Room_options_top{position: relative;cursor: pointer;}
+#Chatroom_Options_Menu_Room_options_top:hover{background-color: #cc8437;}
+#Chatroom_Options_Menu_Room_options{display: none;z-index: 1;background-color: #F8A145;right: 100px;top: -3px;position: absolute;}
+#Chatroom_Options_Menu_Room_options_top:hover #Chatroom_Options_Menu_Room_options{display: flex;flex-direction: column;}
+#online_user{display: flex;justify-content: center;align-items: center;background-color: #F8A145;width: 100px;}
+#online_user img{width: 30px;height: 30px;border-radius: 20px;margin-right: 5px;}
+#online_user p{font-family: 'Inter', sans-serif;font-size: 15px;font-weight: 500;color: #151515;}
+#online_user:hover{background-color: #cc8437;}
+#Chatroom_Options_Online_Users_list{display: none;flex-direction: column;position: absolute;top:17px}
+#Chatroom_Options_Online_Users{display: flex;position: relative;margin-left: auto;margin-right: 20px;}
+#Chatroom_Options_Online_Users p{font-family: 'Arimo', sans-serif;font-size: 15px;font-weight: 500;color: #151515;cursor: pointer;}
+#Chatroom_Options_Online_Users:hover #Chatroom_Options_Online_Users_list{display: flex;cursor: pointer;}
+.join_status{display: flex;width: 100%;height: 30px;justify-content: center;align-items: center;}
+.join_status p{color: #F8A145;font-family: 'Arimo', sans-serif;font-size: 15px;font-weight: 500;}
+
+#ChangeUsername form{display: flex;flex-direction: column;justify-content: center;align-items: center;height: 100%;}
+#ChangeUsername form label{font-family: 'Arimo', sans-serif;font-size: 25px;font-weight: 500;color: #F8A145;margin-bottom: 30px;}
+#newUsername{width: 50%;border: 0;height: 40px;border-radius: 5px;}
+#usernameSubmit{border: 0;background-color: #F8A145;color: #151515;width: 40%;height: 40px;display: flex;justify-content: center;align-items: center;border-radius: 10px;margin-top: 20px;
+  font-family: 'Arimo', sans-serif;font-size: 15px;font-weight: 550;}
+
+  #changeProfilePicture> p{color: #F8A145 ;font-family: 'Arimo', sans-serif;font-size: 20px;font-weight: 550;margin-bottom: 50px;}
+  #changeProfilePicture{justify-content: center;align-items: center;}
+  #submitpic{margin-top: 30px;border-radius: 10px;width: 30%;height: 40px;background-color: #F8A145;color: #151515;display: flex;justify-content: center;align-items: center;}
+  #submitpic p {font-family: 'Arimo', sans-serif;font-size: 20px;font-weight: 550}
